@@ -8,22 +8,6 @@ public class Human{
     private int iQ;
     private String[][] schedule;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Human human = (Human) o;
-        return age == human.age && iQ == human.iQ &&
-                Objects.equals(name, human.name) &&
-                Objects.equals(surname, human.surname) &&
-                Objects.deepEquals(schedule, human.schedule);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, surname, age, iQ, Arrays.deepHashCode(schedule));
-    }
-
     public Human(){
 
     }
@@ -80,5 +64,20 @@ public class Human{
                 ", iQ=" + getiQ() +
                 ", schedule=" + Arrays.toString(getSchedule()) +
                 '}';
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Human human = (Human) o;
+        return age == human.age && iQ == human.iQ &&
+                Objects.equals(name, human.name) &&
+                Objects.equals(surname, human.surname) &&
+                Objects.deepEquals(schedule, human.schedule);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname, age, iQ, Arrays.deepHashCode(schedule));
     }
 }

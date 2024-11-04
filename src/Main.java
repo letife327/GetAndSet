@@ -13,5 +13,11 @@ public class Main {
             family.removeChild(child1);
         System.out.println(Arrays.toString(family.getChildren()));
         System.out.println(family.familyCount());
+        System.out.println(Family.countFamilies);
+
+        Pet pet1 = new Pet("mesi", "pisik",2,75,new String[]{"eating","Sleeping"});
+        Pet pet2 = new Pet("mesi", "pisik",2,75,new String[]{"sjsjs", "eating"});
+        System.out.println(pet1.hashCode()==pet2.hashCode());
+        System.out.println(pet1.equals(pet2));
     }
 }

@@ -7,6 +7,7 @@ public class Family extends Human {
     private Human[] children = new Human[10];
     private Pet pet;
     int pointer = 0;
+    public static int countFamilies=0;
 
 
 
@@ -17,7 +18,7 @@ public class Family extends Human {
     public Family(Human mother, Human father) {
         this.mother = mother;
         this.father = father;
-
+        countFamilies++;
     }
 
 
@@ -53,7 +54,7 @@ public class Family extends Human {
     }
 
     public int countFamilies() {
-        return 0;
+        return countFamilies;
     }
 
     public Human getMother() {
