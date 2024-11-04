@@ -19,5 +19,6 @@ public class Main {
         Pet pet2 = new Pet("mesi", "pisik",2,75,new String[]{"sjsjs", "eating"});
         System.out.println(pet1.hashCode()==pet2.hashCode());
         System.out.println(pet1.equals(pet2));
+        System.out.println("Salam Aqil muellim");
     }
 }
